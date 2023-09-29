@@ -16,20 +16,39 @@ else:
 '''
 
 import math
+import sys
 
-def main():
-    name = input()
-    a = int(input())
-    b = int(input())
-    ab = int(input())
-
-    if(a-b < 0):
+def solution(a, b, ab):
+    if(a-b < 0):  # if a-b is negative, then we can figure if the user is a jedi or sith
         if( ab == abs(a-b)):
             ans = 'SITH'
         else:
             ans = 'JEDI'
     else:
         ans = 'VEIT EKKI'
+    
+    return ans
+
+def test():
+    a = 69
+    b = 80
+    ab = -11
+    assert solution(a,b,ab) == 'JEDI'
+    assert solution(2, 4, 2) == 'SITH'
+    assert solution(4, 3, 1) == 'VEIT EKKI'
+    print("All test cases passed!", file=sys.stderr)
+
+
+def main():
+
+    test()
+
+    name = input()
+    a = int(input())
+    b = int(input())
+    ab = int(input())
+
+    ans = solution(a, b, ab)
     
     print(ans)
 
