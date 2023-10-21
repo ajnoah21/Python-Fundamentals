@@ -40,8 +40,12 @@ def translate(phrase):
 def main():
     
     
-    while():
-        phrase = input().split()
+    while(True):
+        try:
+            phrase = input()
+        except EOFError:
+            break
+        phrase = phrase.split()
         new_phrase = translate(phrase)
         print(new_phrase)
         #phrase = input().split()
