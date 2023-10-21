@@ -43,10 +43,10 @@ def main():
                     ordered.insert(index,numbers[i]) #found someone shorter, insert height in front
                     added = True
                     break
-                if(not added):
-                    ordered.append(numbers[i])
-                    break
                 index = index+1
+            if(not added):
+                ordered.append(numbers[i])
+                
         print(f"{set_number} {steps}")
         #print(set_number,steps)
 

@@ -42,6 +42,7 @@ def main():
                 if i == 0:
                     ordered.append(nums[j])
                 i = i-1
+        print(ordered)
         print(set_num,steps)
         
 
