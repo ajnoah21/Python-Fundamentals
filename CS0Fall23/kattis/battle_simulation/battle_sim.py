@@ -15,13 +15,13 @@ def main():
     combos = ('LBR','LRB','BRL','BLR','RBL','RLB')
     for combo in combos:
         moves=moves.replace(combo,'C') #Replace all combos with 'C' counter
-    #print(moves)
+    print(moves)
     counters = ""
     for ch in moves:
         if ch == 'R':
-            counters += 'S'
+            counters = counters + 'S'
         elif ch == 'B':
-            counters += 'K'
+            counters = counters + 'K'
         elif ch == 'L':
             counters += 'H'
         else: # Contain 'C'
