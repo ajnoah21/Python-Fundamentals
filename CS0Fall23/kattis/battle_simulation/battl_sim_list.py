@@ -7,38 +7,46 @@ Algorithm:
     for each char in string, output counter char, 'R'>'S','B'>'K','L'>'H'
     if see LBR,LRB,BRL,BLR,RBL,RLB ect..., output 'C' to counter
 '''
+
+# Python program to show time by perf_counter() 
+from time import perf_counter
+
 def test():
     pass
 
 def main():
     moves = input()
+    
+    timestart = perf_counter()
+
     combos = ('LBR','LRB','BRL','BLR','RBL','RLB')
-    #for combo in combos:
-    #    moves=moves.replace(combo,'C') #Replace all combos with 'C' counter
-    #print(moves)
+    
     counters = []
+    
     #for ch in moves:
-    index=0
+    index = 0
     while(index < len(moves)):
-        if( (index <= len(moves)-2) ):
-            if( moves[index:index+3] in combos):
-                #counters += 'C'
-                counters.append('C')
-                index += 3
-                continue
-        if moves[index] == 'R':
-            #counters = counters + 'S'
+        if( (index <= len(moves)-2) and (moves[index:index+3] in combos)):
+            counters.append('C')
+            #counters += 'C'
+            index += 2
+        elif moves[index] == 'R':
             counters.append('S')
+            #counters += 'S'
         elif moves[index] == 'B':
-            #counters = counters + 'K'
             counters.append('K')
+            #counters += 'K'
         else:# moves[index] == 'L':
-            #counters += 'H'
             counters.append('H')
+            #counters += 'H'
         
-        index += 1
+        index +=1
     
     print(''.join(counters))
+
+    timestop = perf_counter()
+    
+    print(f"Time = {(timestop-timestart)*1000000} miliseconds." )
 
 
 # if I'm the main program, run my main function,

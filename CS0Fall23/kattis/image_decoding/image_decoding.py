@@ -37,7 +37,9 @@ def image_decode(scan_lines):
         #print("Error decoding image")
         image.append("Error decoding image")
     else:
-        print()
+        image.append('\n')
+
+    return image
 
 def main():
     
@@ -48,6 +50,7 @@ def main():
             scan_lines.append(input())
 
         out_lines = image_decode(scan_lines)
+        print(out_lines)
     else:
         return
 
