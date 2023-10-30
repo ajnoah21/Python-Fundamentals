@@ -15,7 +15,7 @@ def image_decode(scan_lines):
     for i in range(len(scan_lines)):
         num_pix_in_line = 0
         
-        line = scan_lines[i] 
+        line = scan_lines[i].split() 
         out_line = ""
         if(line[0] == '#'):
             sym = 0
@@ -36,25 +36,26 @@ def image_decode(scan_lines):
     if(error_cond == True):
         #print("Error decoding image")
         image.append("Error decoding image")
-    else:
-        image.append('\n')
 
-    return image
+    return '\n'.join(image)
 
 def main():
     
     num_lines = int(input())
-    if(num_lines != 0):
-        scan_lines = []
-        for i in range(num_lines):
-            scan_lines.append(input())
+    while(num_lines != 0):
+        if(num_lines != 0):
+            scan_lines = []
+            for i in range(num_lines):
+                scan_lines.append(input())
 
-        out_lines = image_decode(scan_lines)
-        print(out_lines)
-    else:
-        return
+            out_lines = image_decode(scan_lines)
+            print(out_lines)
+            print()
+        else:
+            return
+        num_lines = int(input())
 
-    #while(scan_lines != 0):
+    
         
    #    scan_lines = int(input())
 
