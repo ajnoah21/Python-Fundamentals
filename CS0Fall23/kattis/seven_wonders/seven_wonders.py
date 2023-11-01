@@ -29,15 +29,10 @@ def solution(line):
         else:
             cards[ch] = 1
     
-    # Check that map is loaded correctly
-    #for key,value in cards.items():
-    #    print(key, value)
-    
     sets=0
     if( 'T' in cards and 'C' in cards and 'G' in cards):
         sets = min([cards['T'], cards['C'], cards['G']])
     
-    #print(sets)
     score = 0
     for value in cards.values():
         score += value**2
