@@ -12,6 +12,8 @@ def image_decode(scan_lines):
     image = []
     error_cond = False
     last_num_pix = 0
+    if(scan_lines == []):
+        return ''
     for i in range(len(scan_lines)):
         num_pix_in_line = 0
         
@@ -33,11 +35,12 @@ def image_decode(scan_lines):
         if((i!=0) and (num_pix_in_line != last_num_pix)):
             error_cond = True
         last_num_pix = num_pix_in_line
+    ans = '\n'.join(image)
     if(error_cond == True):
         #print("Error decoding image")
-        image.append("Error decoding image")
+        ans += "\nError decoding image"
 
-    return '\n'.join(image)
+    return ans
 
 def main():
     
@@ -50,10 +53,11 @@ def main():
 
             out_lines = image_decode(scan_lines)
             print(out_lines)
-            print()
         else:
             return
         num_lines = int(input())
+        if(num_lines != 0): # Stupid Kattis! Need extra logic to make sure 
+            print()
 
     
         
