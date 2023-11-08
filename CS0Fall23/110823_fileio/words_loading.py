@@ -33,7 +33,7 @@ def game(difficulty, name):
             print("Thanks for playing!")
             break
     print(stats)
-    with open(name, 'w') as out_file:
+    with open(name + 'txt', 'w') as out_file:
         out_file.write(f"Player Name: {stats[0]}\nWon: {stats[1]}\nLost: {stats[2]}")
 
 
