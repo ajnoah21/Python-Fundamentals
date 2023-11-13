@@ -13,6 +13,9 @@ def game(stats):
         stats[key] += 1
 
 def write_file(name_path, stats):
+    '''Take two parameters, a file_name (with full path), and a stats{}
+    dictionary which is loaded or created by check_name_for_save
+    '''
     with open(name_path,'w') as my_file:
         for key,value in stats.items():
             my_file.write(f"{key} {value}\n")
@@ -40,7 +43,7 @@ def check_name_for_save(name_path):
         stats["Wins"] = 0
         stats["Loses"] = 0
         stats["total_guesses"] = 0
-        stats["times_played"] = ''
+        stats["times_played"] = 0
         is_empty = True
     
     return stats, is_empty
