@@ -14,13 +14,21 @@ def game(stats):
 
 def write_file(name_path, stats):
     '''Take two parameters, a file_name (with full path), and a stats{}
-    dictionary which is loaded or created by check_name_for_save
+    dictionary which is loaded or created by check_name_for_save, writes
+    the stats to the file.
+    Takes a string pathname and a stats dictionary as parameters,
+    returns nothing
     '''
     with open(name_path,'w') as my_file:
         for key,value in stats.items():
             my_file.write(f"{key} {value}\n")
 
 def read_player_file(name_path):
+    '''
+    Open and read contents of file into "stats" dictionary
+    Take a full pathname string for a parameter and returns 
+    (stats) dictionary.
+    '''
     stats = {}
     with open(name_path,'r') as my_file:
         for i in range(4):
@@ -30,6 +38,13 @@ def read_player_file(name_path):
     return stats
 
 def check_name_for_save(name_path):
+    '''
+    Tries to open file at name_path, returns "stats" 
+    dictionary and "is_empty" bool in case the file 
+    is empty or does not exist. In the case of no file or empty,
+    stats is initialized with zero values.
+    Takes a string pathname as a parameter and returns (stats, is_empty)
+    '''
     
     if( os.path.isfile(name_path) and os.path.getsize(name_path) > 0):
         print("File Exists and has stuff, better read it in...")
