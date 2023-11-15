@@ -3,10 +3,9 @@ import pathlib
 import string
 my_path = pathlib.Path(__file__).parent.resolve() #gets the path to file folder
 
-
 def game(name, stats):
     while(True):
-        guess = input("Guess a letter: ")
+        guess = input(f"Hello, {name}, Guess a letter: ")
         stats["total_guesses"] += 1
         if( guess not in string.ascii_letters):
             print("Try entering a single chacter, a letter preferably: ")
@@ -16,7 +15,7 @@ def game(name, stats):
         stats["Wins"] += 1
     else:
         stats["Loses"] += 1
-        
+
     stats["times_played"] += 1
 
 def main():
