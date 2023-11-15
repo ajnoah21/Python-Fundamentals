@@ -8,7 +8,8 @@ we have used in this Python class.
 
 #2 Consider the following code:
 def add_two(a, b):
-    a+b+1
+    return a+b
+    
 print(add_two(1,3))
 #2 What is the output of the code?
 '''
