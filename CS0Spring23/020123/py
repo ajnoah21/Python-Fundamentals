@@ -1,0 +1,39 @@
+n = input('Enter in a number:') # Waits for input from the user
+
+print(type(n)) #prints the type that "input" returns, which is always a str
+
+new_n = (1+2+3+4)*len(n) #multiplies 10 * the length of string n
+
+n = float(n) # Converts n into a float number
+
+sum = n + 1.0 # Do some math
+
+print(sum) # Print the result
+
+
+print(new_n)
+
+print("Hello, my name is...\nCorin") #uses a '\n' (newline character) to insert a new line
+
+print("\tA \"string\" with a \'backslash\' \\, and a tab at the beginning.")
+
+print("My solution is \rbonkered") # Using a '\r' (carrage return) to move the terminal position back the the beginning of the line
+
+math_int_div = 10//3
+print(math_int_div)
+math_mod_div = 10%3
+print(math_mod_div)
+
+minutes_tot = 130
+hours = minutes_tot//60
+minutes_rem = minutes_tot%60
+print(minutes_tot)
+print(hours)
+print(minutes_rem)
+
+fname = 'Corin'
+lname = "Chepko"
+print(fname+" "+lname)
+
+ten_names = fname*10
+print(ten_names)
