@@ -20,6 +20,8 @@ expression = a+operand+b
 #print(expression) #check and verify step that my previous lines are doing what I want
 print(eval(expression))
 
+'''
 a='hello'
 expression = a+operand+b
-print(eval(expression))
+print(eval(expression)) #gives error because now expression is hello+b, and varible hello does not exist, a has to be a literal value or name of vaild variable
+'''
