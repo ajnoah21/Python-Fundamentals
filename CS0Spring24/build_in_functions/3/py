@@ -1,0 +1,20 @@
+import string
+
+print(string.ascii_letters)
+print(string.hexdigits)
+print(string.punctuation)
+
+a = "1"
+
+print(a in string.digits)
+print(a in string.ascii_letters)
+
+print(string.capwords("tile of movie is"))
+
+phrase = "Hello wor'ld!"
+new_phrase = ""
+for c in phrase:
+    if(c not in string.punctuation):
+        new_phrase += c
+
+print(new_phrase)
