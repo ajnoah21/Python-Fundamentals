@@ -32,5 +32,4 @@ dif4 = req_bishops-bishops
 
 #FIXMEs 5,6: make dif5 and dif6 
 
-#FIXME 7: make a function that prints the solution
-solution(dif1, dif2, dif3, dif4, dif5, dif6)
+#FIXME 7: call solution function passing proper parameters
