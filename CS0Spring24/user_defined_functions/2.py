@@ -1,15 +1,20 @@
-def add_two():
-    global number1
-    sum = number1+number2
-    number1 = 10
+'''
+Corin Chepko
+2/19/24
+My Calulator Program
+'''
 
+
+def add_two(number1, number2):
+    sum = number1+number2
     return sum
 
+def main():
+    number1 = float(input("Enter first number"))
+    number2 = float(input("Enter second number"))
 
-number1 = 4
-number2 = 5
+    sum = add_two(number1, number2)
+    print(f"Sum of {number1} + {number2} = {sum}")
 
-sum = add_two()
-print(f"Sum of {number1} + {number2} = {sum}")
-print("Sum is", sum)
+main()
 
