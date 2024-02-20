@@ -12,7 +12,7 @@ def main():
     if( yes_no != 'yes' and yes_no != "y" and yes_no != "Yes" and yes_no != 'Y'): # one way conditional
         sure = input("Are you sure?")
         if( sure == 'y'):
-            print("Exiting program...")
+            print("Exitogram...")
             return  # This is an early exit to the program
     
     print("Sum of x and y is", x+y)
