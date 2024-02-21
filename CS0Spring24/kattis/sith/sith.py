@@ -18,7 +18,7 @@ def solution(a, b, a_minus_b):
     elif(a-b == a_minus_b):  # if this is negative and equal to reported difference, user is JEDI
         answer = "JEDI"
     else:
-        answer = "SITH" # otherwise the user is a dirty liar
+        answer = "SITH" # otherwise the force user is a dirty liar
 
     return answer
 
@@ -29,9 +29,13 @@ def test():
     print("All test passed!", file=sys.stderr)
 
 def main():
+    print("Enter name of force user: ", file=sys.stderr)
     input()  # Don't need the name, so we just toss this input
+    print("Enter first number: ", file=sys.stderr)
     a = int(input())
+    print("Enter second number: ", file=sys.stderr)
     b = int(input())
+    print("Enter difference: ", file=sys.stderr)
     a_minus_b = int(input())
 
     answer = solution(a, b, a_minus_b)
