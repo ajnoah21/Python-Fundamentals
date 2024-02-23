@@ -30,13 +30,8 @@ def main():
     print("Enter names separated by a space: ", file=sys.stderr)  # Kattis safe message to user
     names = input().split()
 
-    #print(n_friends)
-    #print(names)
-
     ans = solution(n_friends, names)
     print(ans)
     
-
-
 test()
 main()
